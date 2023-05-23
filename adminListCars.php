@@ -1,22 +1,22 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Araç Bilgileri</title>
+        <title>Araç Listesi</title>
         <meta charset="UTF-8">
     </head>
     <body>
 <?php
-    session_start();
+    session_start();//admin hesabi ile giris yapilip yapilmadigi kontrol ediliyor
     if(!isset($_SESSION['adminName']))
         header("Location: adminLogin.php");
     else{
         require_once("config.php");
         require_once("navbarAdmin.html");
 ?>
-    
-    <div class="container col-sm-11 mt-5">
+    <!-- araclarin listelenmesi -->
+    <div class="container col-sm-12 mt-5">
         <h3 class="text-primary mb-3">Araç Bilgileri</h3>
-        <button class="btn btn-success mb-2">Araç Ekle</button>
+        <a href="addCar.php" class="btn btn-success mb-2">Araç Ekle</a>
         <table class="table table-hover text-center">
             <thead>
                 <tr>
@@ -31,6 +31,7 @@
                 <th scope="col">Kiralama Ücreti</th>
                 <th scope="col">Kiralama Yaşı</th>
                 <th scope="col">Ehliyet Yaşı</th>
+                <th scope="col">Kapasite</th>
                 <th scope="col"></th>
                 </tr>
             </thead>
@@ -52,11 +53,11 @@
                     <td>'.$list["Kiralama_Ucret"].'</td>    
                     <td>'.$list["Kiralama_Yas"].'</td>
                     <td>'.$list["Ehliyet_Yas"].'</td>
+                    <td>'.$list["Kapasite"].'</td>
                     <td>
-                        <button class="btn btn-primary mb-2">Güncelle</button>
-                        <button class="btn btn-danger mb-2">Sil</button>
+                        <a href="updateCar.php?id='.$list["Arac_ID"].'" class="btn btn-primary mb-2">Güncelle</a>
+                        <a href="deleteCar.php?id='.$list["Arac_ID"].'" class="btn btn-danger mb-2">Sil</a>
                     </td>
-                </tr>
                 </tr>
             </tbody>
             ';

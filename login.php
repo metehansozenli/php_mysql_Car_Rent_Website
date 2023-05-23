@@ -24,12 +24,18 @@
             exit;
         }
         $login = mysqli_num_rows($result);
-
-        if ($login==1)
+        //login olmus ise 
+        if ($login==1){
+            $sql = "SELECT `Kullanici_ID` FROM `kullanici` WHERE `eposta` = '$email'";
+            $result2 = mysqli_query($connect, $sql);
+            $row = mysqli_fetch_assoc($result2);
             $_SESSION['userEmail'] = $email;
+            $_SESSION['userID'] = $row["Kullanici_ID"];
+        }    
         else
             $message = "<label class='text-danger'>Kullanıcı adı veya şifre yanlış</label>";
     }
+    //session baslamıssa login ekran gelmemesi
     if(isset($_SESSION['userEmail'])) 
         header("Location: index.php");
     else {

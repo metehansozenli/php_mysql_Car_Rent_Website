@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Anasayfa</title>
+        <title>AracKiralama.com</title>
         <meta charset="UTF-8">
     </head>
 <?php
@@ -28,72 +28,66 @@
     }
 
 ?>
-
-<a name="rent"></a>
-<p class="display-3 text-center text-primary mt-3">Hemen Aracınızı Kiralayın</p>
-<div class="container d-flex align-items-center justify-content-center mt-5">
-    <div class="row">
-        <div class="col-sm">
-            <div style="width: 200px; height: 50px; background-color: #ebf5fd; text-align: center; font-size: 25px; padding-top: 5px ">
-                Teslim Noktası
+    <!-- arac kiralama ekrani ve formlari -->
+    <a name="rent"></a>
+    <p class="display-3 text-center text-primary mt-3">Hemen Aracınızı Kiralayın</p>
+    <form action="rent.php" method="POST">
+        <div class="container d-flex align-items-center justify-content-center mt-5">
+        <div class="row">
+            <div class="col-sm">
+                <div style="width: 200px; height: 50px; background-color: #ebf5fd; text-align: center; font-size: 25px; padding-top: 5px ">
+                    Teslim Noktası
+                </div>
+                <div class="form-group" style="width: 400px;">
+                        <select class="form-control form-control-lg" name="receivePoint" required>
+                            <option value="0">Bursa/Nilüfer</option>
+                            <option value="1">Bursa/Osmangazi</option>
+                            <option value="2">İstanbul/Kadıköy</option>
+                            <option value="3">İstanbul/Beşiktaş</option>
+                            <option value="4">Ankara/Söğütözü</option>
+                        </select>
+                </div>
             </div>
-            <div class="form-group">
-                <form action="" style="width: 400px;">
-                    <select class="form-control form-control-lg" id="receivePoint">
-                        <option value="0">Bursa/Nilüfer</option>
-                        <option value="1">Bursa/Osmangazi</option>
-                        <option value="2">İstanbul/Kadıköy</option>
-                        <option value="3">İstanbul/Beşiktaş</option>
-                        <option value="4">Ankara/Söğütözü</option>
-                    </select> 
-                </form>
-            </div>
-        </div>
-        <div class="col-sm">
-            <div style="width: 140px; height: 50px; background-color: #ebf5fd; text-align: center; font-size: 25px; padding-top: 5px ">
-                Teslim Tarihi
-            </div>
-            <div class="form-group">
-                <form action="" style="width: 225px;">
-                    <input type="datetime-local" class="form-control form-control-lg" id="receiveDate" >
-                </form>
+            <div class="col-sm">
+                <div style="width: 140px; height: 50px; background-color: #ebf5fd; text-align: center; font-size: 25px; padding-top: 5px ">
+                    Teslim Tarihi
+                </div>
+                <div class="form-group" style="width: 225px;">
+                    <input type="datetime-local" class="form-control form-control-lg" name="receiveDate" required>
+                </div>
             </div>
         </div>
-    </div>
-</div>
-<div class="container d-flex align-items-center justify-content-center mt-3">
-    <div class="row">
-        <div class="col-sm">
-            <div style="width: 200px; height: 50px; background-color: #ebf5fd; text-align: center; font-size: 25px; padding-top: 5px ">
-                İade Noktası
-            </div>
-            <div class="form-group">
-                <form action="" style="width: 400px;">
-                    <select class="form-control form-control-lg" id="returnPoint">
-                        <option value="0">Bursa/Nilüfer</option>
-                        <option value="1">Bursa/Osmangazi</option>
-                        <option value="2">İstanbul/Kadıköy</option>
-                        <option value="3">İstanbul/Beşiktaş</option>
-                        <option value="4">Ankara/Söğütözü</option>
-                    </select> 
-                </form>
+        </div>
+        <div class="container d-flex align-items-center justify-content-center mt-3">
+            <div class="row">
+                <div class="col-sm">
+                    <div style="width: 200px; height: 50px; background-color: #ebf5fd; text-align: center; font-size: 25px; padding-top: 5px ">
+                        İade Noktası
+                    </div>
+                    <div class="form-group" style="width: 400px;">
+                        <select class="form-control form-control-lg" name="returnPoint" required>
+                            <option value="0">Bursa/Nilüfer</option>
+                            <option value="1">Bursa/Osmangazi</option>
+                            <option value="2">İstanbul/Kadıköy</option>
+                            <option value="3">İstanbul/Beşiktaş</option>
+                            <option value="4">Ankara/Söğütözü</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-sm">
+                    <div style="width: 140px; height: 50px; background-color: #ebf5fd; text-align: center; font-size: 25px; padding-top: 5px ">
+                        İade Tarihi
+                    </div>
+                    <div class="form-group" style="width: 225px;">
+                        <input type="datetime-local" class="form-control form-control-lg" name="returnDate" required>
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="col-sm">
-            <div style="width: 140px; height: 50px; background-color: #ebf5fd; text-align: center; font-size: 25px; padding-top: 5px ">
-                İade Tarihi
-            </div>
-            <div class="form-group">
-                <form action="" style="width: 225px;">
-                    <input type="datetime-local" class="form-control form-control-lg" id="returnDate" >
-                </form>
-            </div>
+        <div class="container col-5">
+            <button type="submit" class="btn btn-primary btn-block">Kirala</button>
         </div>
-    </div>
-</div>
-<div class="container col-5">
-    <button type="submit" class="btn btn-primary btn-block">Kirala</button>
-</div>
+    </form>
 
 <p class="display-4 text-center text-primary mt-5">Popüler Kiralama Seçenekleri</p>
 <!-- Popüler arac card'lari -->
@@ -129,6 +123,6 @@
 </div>
 
 <div >
-    <p align="center">Kiralama A.Ş.
+    <p align="center">AracKiralama.com A.Ş.
     <br> Her Hakkı Saklıdır. Copyrigt &copy 2023</p>
 </div>

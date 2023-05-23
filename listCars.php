@@ -28,7 +28,7 @@
     $counter = 0;
     
     while ($list = mysqli_fetch_array($result)) {    
-        if ($counter % 3 == 0) {
+        if ($counter % 3 == 0) {//her sirada uc adet veri gorunmesi icin kosul
             echo '<div class="container col-sm-11 mt-4 mb-4">';
             echo '<div class="row">';
         }
@@ -58,7 +58,7 @@
                             <b>'.$list["Kiralama_Ucret"].' ₺</b><font class="text-muted">/Günlük</font>    
                         </div>
                         <div class="col-sm">
-                            <button type="button" class="btn btn-primary float-right">Hemen Kirala</button>
+                            <a href="index.php#rent" type="button" class="btn btn-primary float-right">Hemen Kirala</a>
                         </div>
                     </div>
                 </div>
@@ -66,7 +66,7 @@
             
         ';
         $counter++;
-        if (($counter) % 3 == 0) {
+        if (($counter) % 3 == 0) {//3 adet veri yazdirildiktan sonra alt satira gecmek icin satir kapatiliyor
             echo '</div>'; // Satır div'inin kapatılması 
             echo '</div>'; // Container div'inin kapatılması
         }

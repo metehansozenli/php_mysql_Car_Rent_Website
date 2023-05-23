@@ -25,13 +25,13 @@
         }
         $login = mysqli_num_rows($q);
 
-        if ($login==1)
+        if ($login==1)//giris yapildiysa
             $_SESSION['adminName'] = $adminName;
         else
             $message = "<label class='text-danger'>Kullanıcı adı veya şifre yanlış</label>";
     }
-    if(isset($_SESSION['adminName'])) 
-        header("Location: aIndex.php");
+    if(isset($_SESSION['adminName'])) //daha onceden giris yapilmissa bu ekran gelmemesi icin
+        header("Location: adminIndex.php");
     else {
 ?>
     <div class="container col-md-4 mt-2">

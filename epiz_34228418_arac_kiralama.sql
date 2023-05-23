@@ -1,14 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 4.9.0.1
+-- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
--- Anamakine: sql300.epizy.com
--- Üretim Zamanı: 19 May 2023, 20:20:40
--- Sunucu sürümü: 10.4.17-MariaDB
--- PHP Sürümü: 7.2.22
+-- Anamakine: 127.0.0.1
+-- Üretim Zamanı: 23 May 2023, 20:34:29
+-- Sunucu sürümü: 10.4.28-MariaDB
+-- PHP Sürümü: 8.2.4
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -30,15 +29,15 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `admin` (
   `Kullanici_Adi` varchar(20) NOT NULL,
-  `Sifre` varchar(25) NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+  `Sifre` varchar(64) NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Tablo döküm verisi `admin`
 --
 
 INSERT INTO `admin` (`Kullanici_Adi`, `Sifre`) VALUES
-('metehanzx', '123');
+('metehanzx', 'a665a45920422f9d417e4867efdc4fb8a04a1f3fff1fa07e998e86f7f7a27ae3');
 
 -- --------------------------------------------------------
 
@@ -51,15 +50,41 @@ CREATE TABLE `arac` (
   `Arac_IMG` varchar(100) NOT NULL,
   `Arac_MarkaModel` varchar(30) NOT NULL,
   `Arac_Kategori` varchar(10) NOT NULL,
-  `Arac_KM` int(11) NOT NULL,
   `Vites_Turu` varchar(10) NOT NULL,
   `Yakit_Turu` varchar(10) NOT NULL,
   `Depozito_Ucret` int(11) NOT NULL,
   `Kiralama_Ucret` int(11) NOT NULL,
   `Kiralama_Yas` tinyint(4) NOT NULL DEFAULT 21,
   `Ehliyet_Yas` tinyint(4) NOT NULL DEFAULT 2,
-  `Kiralama_Durum` tinyint(1) NOT NULL DEFAULT 1
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+  `Kiralama_Durum` tinyint(1) NOT NULL DEFAULT 1,
+  `Kapasite` tinyint(4) DEFAULT 5
+) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Tablo döküm verisi `arac`
+--
+
+INSERT INTO `arac` (`Arac_ID`, `Arac_IMG`, `Arac_MarkaModel`, `Arac_Kategori`, `Vites_Turu`, `Yakit_Turu`, `Depozito_Ucret`, `Kiralama_Ucret`, `Kiralama_Yas`, `Ehliyet_Yas`, `Kiralama_Durum`, `Kapasite`) VALUES
+(1, 'imgs/a-fiat-egea-hybrid.png', 'Fiat Egea', 'ekonomik', 'Manuel', 'Dizel', 2000, 750, 21, 2, 1, 5),
+(2, 'imgs/c-renault-clio.png', 'Renault Clio', 'ekonomik', 'Otomatik', 'Dizel', 2000, 850, 21, 2, 1, 5),
+(3, 'imgs/n-citroen-c-elysee.png', 'Citroen C-Elysee', 'ekonomik', 'Manuel', 'Benzin', 2000, 700, 21, 2, 1, 5),
+(4, 'imgs/p-ford-ecosport.png', 'Ford Ecosport', 'konfor', 'Otomatik', 'Benzin', 2500, 1100, 23, 2, 1, 5),
+(5, 'imgs/f-citroen-c3.png', 'Citroen C3', 'ekonomik', 'Otomatik', 'Benzin', 2000, 800, 21, 2, 1, 5),
+(6, 'imgs/f-dacia-sandero.png', 'Dacia Sandero', 'ekonomik', 'Manuel', 'Benzin', 2000, 750, 21, 2, 1, 5),
+(7, 'imgs/f-hyundai-i20.png', 'Hyundai i20', 'ekonomik', 'Otomatik', 'Dizel', 2000, 850, 21, 2, 1, 5),
+(8, 'imgs/f-opel-corsa.png', 'Opel Corsa', 'ekonomik', 'Otomatik', 'Dizel', 2000, 850, 21, 2, 1, 5),
+(9, 'imgs/p-citroen-c3-aircross.png', 'Citroen C3 Aircross', 'konfor', 'Otomatik', 'Benzin', 2500, 1100, 23, 2, 1, 5),
+(10, 'imgs/o-ford-focus.png', 'Ford Focus', 'konfor', 'Otomatik', 'benzin', 2500, 1150, 23, 2, 1, 5),
+(11, 'imgs/p-ford-puma.png', 'Ford Puma', 'konfor', 'Otomatik', 'Benzin', 2500, 1125, 23, 2, 1, 5),
+(12, 'imgs/o-honda-civic.png', 'Honda Civic', 'konfor', 'Otomatik', 'Dizel', 2500, 1200, 23, 2, 1, 5),
+(13, 'imgs/o-toyota-corolla.png', 'Toyota Corolla', 'konfor', 'Otomatik', 'Benzin', 2500, 1100, 23, 2, 1, 5),
+(14, 'imgs/p-peugeot-2008.png', 'Peugeot 2008', 'konfor', 'Otomatik', 'Benzin', 2500, 1100, 23, 2, 1, 5),
+(15, 'imgs/p-vw-taigo.png', 'Volkswagen Taigo', 'konfor', 'Otomatik', 'Dizel', 2500, 1300, 23, 2, 0, 5),
+(16, 'imgs/c-bmw-ix3.png', 'BMW IX3', 'elektrikli', 'Otomatik', 'Elektrik', 5000, 4500, 25, 3, 1, 5),
+(17, 'imgs/c-renault-zoe.png', 'Renault Zoe', 'elektrikli', 'Otomatik', 'Elektrik', 5000, 3800, 24, 3, 1, 5),
+(18, 'imgs/k-hyundai-kona.png', 'Hyunadi Kona', 'elektrikli', 'Otomatik', 'Elektrik', 5000, 4000, 25, 3, 1, 5),
+(25, 'imgs/i-citroen-jumpy.png', 'Citroen Jumpy', 'van', 'Otomatik', 'Benzin', 4500, 4000, 25, 2, 1, 9),
+(24, 'imgs/i-mercedes-vito.png', 'Mercedes Vito', 'van', 'Otomatik', 'Dizel', 6000, 5000, 25, 2, 1, 9);
 
 -- --------------------------------------------------------
 
@@ -68,12 +93,21 @@ CREATE TABLE `arac` (
 --
 
 CREATE TABLE `kiralama` (
-  `Kullanici_ID` varchar(11) NOT NULL,
+  `Kullanici_ID` int(11) NOT NULL,
   `Arac_ID` int(11) NOT NULL,
-  `Baslangic_Tarih` datetime NOT NULL,
-  `Bitis_Tarih` datetime NOT NULL,
-  `Kiralama_Suresi` time NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+  `Teslim_Tarih` datetime NOT NULL,
+  `Iade_Tarih` datetime NOT NULL,
+  `Teslim_Yeri` varchar(50) NOT NULL,
+  `Iade_Yeri` varchar(50) NOT NULL,
+  `Ucret` int(11) NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Tablo döküm verisi `kiralama`
+--
+
+INSERT INTO `kiralama` (`Kullanici_ID`, `Arac_ID`, `Teslim_Tarih`, `Iade_Tarih`, `Teslim_Yeri`, `Iade_Yeri`, `Ucret`) VALUES
+(1, 16, '2023-05-23 20:47:00', '2023-05-24 20:47:00', 'İstanbul/Beşiktaş', 'Bursa/Nilüfer', 4500);
 
 -- --------------------------------------------------------
 
@@ -82,15 +116,24 @@ CREATE TABLE `kiralama` (
 --
 
 CREATE TABLE `kullanici` (
+  `Kullanici_ID` int(11) NOT NULL,
   `TC_No` varchar(11) NOT NULL,
   `Isim` varchar(25) NOT NULL,
   `Soyisim` varchar(25) NOT NULL,
   `DogumTarihi` date NOT NULL,
-  `Eposta` varchar(25) NOT NULL,
+  `Eposta` varchar(50) NOT NULL,
   `Tel_No` varchar(10) NOT NULL,
-  `Sifre` varchar(25) NOT NULL,
+  `Sifre` varchar(64) NOT NULL,
   `Ehliyet_Yas` tinyint(4) NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Tablo döküm verisi `kullanici`
+--
+
+INSERT INTO `kullanici` (`Kullanici_ID`, `TC_No`, `Isim`, `Soyisim`, `DogumTarihi`, `Eposta`, `Tel_No`, `Sifre`, `Ehliyet_Yas`) VALUES
+(1, '15684785690', 'metehan', 'sözenli', '2002-05-06', 'metehansozenli60@gmail.com', '5326938904', '12345', 2),
+(2, '30203333434', 'metehan', 'sözenli', '2023-05-03', 'xmetu10@hotmail.com', '5324937666', 'a665a45920422f9d417e4867efdc4fb8a04a1f3fff1fa07e998e86f7f7a27ae3', 2);
 
 --
 -- Dökümü yapılmış tablolar için indeksler
@@ -112,15 +155,16 @@ ALTER TABLE `arac`
 -- Tablo için indeksler `kiralama`
 --
 ALTER TABLE `kiralama`
-  ADD KEY `Kullanici_ID` (`Kullanici_ID`),
-  ADD KEY `Arac_ID` (`Arac_ID`);
+  ADD KEY `Arac_ID` (`Arac_ID`),
+  ADD KEY `Kullanici_ID` (`Kullanici_ID`) USING BTREE;
 
 --
 -- Tablo için indeksler `kullanici`
 --
 ALTER TABLE `kullanici`
-  ADD PRIMARY KEY (`TC_No`),
-  ADD UNIQUE KEY `Eposta` (`Eposta`);
+  ADD PRIMARY KEY (`Kullanici_ID`),
+  ADD UNIQUE KEY `Eposta` (`Eposta`),
+  ADD UNIQUE KEY `TC_No` (`TC_No`) USING BTREE;
 
 --
 -- Dökümü yapılmış tablolar için AUTO_INCREMENT değeri
@@ -130,13 +174,13 @@ ALTER TABLE `kullanici`
 -- Tablo için AUTO_INCREMENT değeri `arac`
 --
 ALTER TABLE `arac`
-  MODIFY `Arac_ID` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `Arac_ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
 
 --
--- Tablo için AUTO_INCREMENT değeri `kiralama`
+-- Tablo için AUTO_INCREMENT değeri `kullanici`
 --
-ALTER TABLE `kiralama`
-  MODIFY `Arac_ID` int(11) NOT NULL AUTO_INCREMENT;
+ALTER TABLE `kullanici`
+  MODIFY `Kullanici_ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
