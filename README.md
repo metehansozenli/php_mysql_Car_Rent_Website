@@ -5,7 +5,7 @@ Gerekli olan programlar:
 - XAMPP
 
 Aşamalar:
-- Aşağıdaki linkten gerekli olan dosyaları indirin.
+- Yandaki linkten gerekli olan dosyaları indirin.
 <a href="https://github.com/metehansozenli/php_mysql_Car_Rent_Website/archive/refs/heads/main.zip">İndir</a>
 - Zip dosyasını klasöre çıkartın.
 - Çıkarttığınız dosyaların tümünü XAMPP'in kurulu olduğu yerdeki htdocs klasörüne atın.(klasörde aynı isimlerde dosya olmamasına dikkat edin)
