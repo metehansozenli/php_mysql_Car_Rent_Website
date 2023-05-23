@@ -5,7 +5,7 @@ Bu site ile araç kiralayabilir, üyelik oluşturabilir, admin girişi yaparak s
 # Admin Girişi
 Kullanıcı Adı : metehanzx </br>
 Şifre : 123 </br>
-Not: web sitesinde admin girişi yapacak kişileri kısıtlayamayacağım için verilerde eksilme artma olabilir ancak kurulum aşamalarını takip ederek tam veriler ile</br> deneyimleyebilirsiniz.
+Not: web sitesinde admin girişi yapacak kişileri kısıtlayamayacağım için verilerde eksilme artma olabilir ancak kurulum aşamalarını takip ederek tam veriler ile deneyimleyebilirsiniz.
 
 # Kurulum
 Gerekli olan programlar:
