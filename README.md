@@ -19,5 +19,5 @@ Aşamalar:
 - Ve artık sayfayı kullanmaya hazırsınız!!.
 
 # Sayfa Tanıtımı ve Linki
-http://metehansozenli.epizy.com/index.php
+http://metehansozenli.epizy.com/index.php </br>
 https://youtu.be/fYm5TjVWX8s
