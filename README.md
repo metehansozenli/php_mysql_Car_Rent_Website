@@ -25,6 +25,9 @@ Aşamalar:
 - Bu işlemden sonra yine tarayıcının url kısmına localhost yazıp giriş yapın. Ekrana araç kiralama sayfası gelmez ise index.php i seçerek devam edin.
 - Ve artık sayfayı kullanmaya hazırsınız!!.
 
+![prev](https://github.com/metehansozenli/php_mysql_Car_Rent_Website/blob/main/pict1.png)
+![prev2](https://github.com/metehansozenli/php_mysql_Car_Rent_Website/blob/main/pict2.png)
+![prev3](https://github.com/metehansozenli/php_mysql_Car_Rent_Website/blob/main/pict3.png)
 # Sayfa Tanıtımı ve Linki
 http://metehansozenli.epizy.com/index.php </br>
 https://youtu.be/fYm5TjVWX8s
