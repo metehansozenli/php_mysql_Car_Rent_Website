@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Anamakine: 127.0.0.1
--- Üretim Zamanı: 23 May 2023, 20:34:29
+-- Üretim Zamanı: 23 May 2023, 22:38:11
 -- Sunucu sürümü: 10.4.28-MariaDB
 -- PHP Sürümü: 8.2.4
 
@@ -132,7 +132,6 @@ CREATE TABLE `kullanici` (
 --
 
 INSERT INTO `kullanici` (`Kullanici_ID`, `TC_No`, `Isim`, `Soyisim`, `DogumTarihi`, `Eposta`, `Tel_No`, `Sifre`, `Ehliyet_Yas`) VALUES
-(1, '15684785690', 'metehan', 'sözenli', '2002-05-06', 'metehansozenli60@gmail.com', '5326938904', '12345', 2),
 (2, '30203333434', 'metehan', 'sözenli', '2023-05-03', 'xmetu10@hotmail.com', '5324937666', 'a665a45920422f9d417e4867efdc4fb8a04a1f3fff1fa07e998e86f7f7a27ae3', 2);
 
 --
