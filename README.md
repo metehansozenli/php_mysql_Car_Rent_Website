@@ -2,7 +2,7 @@
 Php ve MySQL kullanarak süsleme için de bootstrap kullanarak geliştirilmiş araç kiralama otomasyonu web sitesi projesidir.
 Bu site ile araç kiralayabilir, üyelik oluşturabilir, admin girişi yaparak sistemdeki araçları silebilir, güncelleyebir veya sisteme yeni araç ekleyebilirsiniz.
 
-#Admin Girişi
+# Admin Girişi
 Kullanıcı Adı : metehanzx </br>
 Şifre : 123 </br>
 Not: web sitesinde admin girişi yapacak kişileri kısıtlayamayacağım için verilerde eksilme artma olabilir ancak kurulum aşamalarını takip ederek tam veriler ile</br> deneyimleyebilirsiniz.
