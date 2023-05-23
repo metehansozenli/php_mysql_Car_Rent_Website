@@ -20,3 +20,4 @@ Aşamalar:
 
 # Sayfa Tanıtımı ve Linki
 http://metehansozenli.epizy.com/index.php
+https://youtu.be/fYm5TjVWX8s
