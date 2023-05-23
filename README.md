@@ -17,3 +17,6 @@ Aşamalar:
 - Database oluşduktan sonra üst kısımdaki içe aktar yazısına tıklayıp indirdiğiniz klasördeki "epiz_34228418_arac_kiralama.sql" seçin ve onaylayın.
 - Bu işlemden sonra yine tarayıcının url kısmına localhost yazıp giriş yapın. Ekrana araç kiralama sayfası gelmez ise index.php i seçerek devam edin.
 - Ve artık sayfayı kullanmaya hazırsınız!!.
+
+# Sayfa Tanıtım ve Linki
+http://metehansozenli.epizy.com/index.php
