@@ -18,5 +18,5 @@ Aşamalar:
 - Bu işlemden sonra yine tarayıcının url kısmına localhost yazıp giriş yapın. Ekrana araç kiralama sayfası gelmez ise index.php i seçerek devam edin.
 - Ve artık sayfayı kullanmaya hazırsınız!!.
 
-# Sayfa Tanıtım ve Linki
+# Sayfa Tanıtımı ve Linki
 http://metehansozenli.epizy.com/index.php
