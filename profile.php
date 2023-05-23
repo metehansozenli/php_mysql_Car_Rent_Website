@@ -1,3 +1,10 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Profil Güncelle</title>
+        <meta charset="UTF-8">
+    </head>
+    <body>
 <?php
     session_start();
     if(!isset($_SESSION['userEmail'])){

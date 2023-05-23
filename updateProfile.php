@@ -8,7 +8,7 @@
 <?php
     
     require_once "config.php";
-    require_once "navbar.html";
+    require_once "navbarLogged.html";
     //dogum tarihininin sinirlandirilmasi icin zaman dilimi secimi
     date_default_timezone_set('Europe/Istanbul');
     session_start();
@@ -28,7 +28,7 @@
         $sql2 = "UPDATE `kullanici` 
                 SET `Isim`= '$name', `Soyisim`= '$surname', `TC_No`= '$userID',
                 `DogumTarihi`= '$dob', `Tel_No`= '$phone', `Eposta`= '$mail',
-                `Ehliyet_Yas`= '$lisence', `Sifre`= '$pass'                    
+                `Ehliyet_Yas`= '$lisence', `Sifre`= '$pass_hash'                    
                 WHERE `Kullanici_ID` = '$user_ID'";
 
         $result2 = mysqli_query($connect, $sql2);
