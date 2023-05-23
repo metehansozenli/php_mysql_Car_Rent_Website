@@ -37,7 +37,7 @@ Aşamalar:
 
 ![prev3](https://github.com/metehansozenli/php_mysql_Car_Rent_Website/blob/main/pict5.png)
 
-# Sayfa Tanıtımı ve Linki
+# Video ve Site Linki
 http://metehansozenli.epizy.com/index.php </br>
 https://youtu.be/fYm5TjVWX8s
 
