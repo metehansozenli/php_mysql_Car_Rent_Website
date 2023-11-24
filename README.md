@@ -20,7 +20,7 @@ Aşamalar:
 - Böylece "Apache" ve "MySQL" aktif hale gelecektir.
 - Sonrasında tarayıcının url girme kısmına "localhost/phpmyadmin/" yazın ve giriş yapın.
 - Açılan sayfad Sunucu bağlantısı karşılaştırması seeçeneğinin utf8mb4_general_ci olmasına dikkat edin
-- Sonra sayfanın sol kısmındaki yeni yazısına basıp "epiz_34228418_arac_kiralama" adında yeni bir datebase oluşturun.
+- Sonra sayfanın sol kısmındaki yeni yazısına basıp "epiz_34228418_arac_kiralama" adında yeni bir database oluşturun.
 - Database oluşduktan sonra üst kısımdaki içe aktar yazısına tıklayıp indirdiğiniz klasördeki "epiz_34228418_arac_kiralama.sql" seçin ve onaylayın.
 - Bu işlemden sonra yine tarayıcının url kısmına localhost yazıp giriş yapın. Ekrana araç kiralama sayfası gelmez ise index.php i seçerek devam edin.
 - Ve artık sayfayı kullanmaya hazırsınız!!.
